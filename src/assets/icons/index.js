@@ -10,7 +10,7 @@ import shieldTick from './shield-tick.svg'
 import star from './star.svg'
 import truckFast from './truck-fast.svg'
 import twitter from './twitter.svg'
-
+import xmark from "./xmark.svg"
 export {
     arrowRight,
     cheveronRight,
@@ -18,6 +18,7 @@ export {
     copyrightSign,
     facebook,
     hamburger,
+    xmark,
     instagram,
     support,
     shieldTick,
