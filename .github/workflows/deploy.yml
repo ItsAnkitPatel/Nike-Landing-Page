@@ -2,6 +2,8 @@ name: Deploy
 
 on:
   push:
+    paths:
+      - 'src/**'  # This line specifies that the workflow should trigger only when changes are made within the src folder
     branches:
       - main
 
