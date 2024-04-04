@@ -1,19 +1,19 @@
-import React, { useState } from "react";
-import { hamburger, xmark } from "../assets/icons";
+import HamburgerMenu from "./HamburgerMenu";
+import useMenu from "../contexts/MenuProvider";
 const Hamburger = () => {
-  const [icon, setIcon] = useState(hamburger);
-  const changeMenuBar = () => {
-    if (icon !== xmark) {
-      return setIcon(xmark);
-    }
-    setIcon(hamburger);
-  };
-
+  const { icon, changeIcon, changeMenuHidden } = useMenu();
   return (
     <>
-      <div className="cursor-pointer" onClick={changeMenuBar}>
+      <div
+        className="cursor-pointer"
+        onClick={() => {
+          changeIcon();
+          changeMenuHidden();
+        }}
+      >
         <img src={icon} alt="" width="23px" />
       </div>
+      <HamburgerMenu />
     </>
   );
 };
