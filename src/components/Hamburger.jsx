@@ -1,14 +1,14 @@
 import HamburgerMenu from "./HamburgerMenu";
 import useMenu from "../contexts/MenuProvider";
 const Hamburger = () => {
-  const { icon, changeIcon, changeMenuHidden } = useMenu();
+  const { icon, changeIcon, changeTransition } = useMenu();
   return (
     <>
       <div
         className="cursor-pointer"
         onClick={() => {
           changeIcon();
-          changeMenuHidden();
+          changeTransition();
         }}
       >
         <img src={icon} alt="" width="23px" />

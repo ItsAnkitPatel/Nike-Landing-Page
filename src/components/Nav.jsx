@@ -6,7 +6,7 @@ import { MenuContextProvider } from "../contexts/MenuProvider";
 import { useState } from "react";
 const Nav = () => {
   const [icon, setIcon] = useState(hamburger);
-  const [isMenuHidden, setIsMenuHidden] = useState("hidden");
+  const [isTransitionEnabled, setIsTransitionEnabled] = useState(false);
 
   const changeIcon = () => {
     if (icon === hamburger) {
@@ -15,16 +15,12 @@ const Nav = () => {
       setIcon(hamburger);
     }
   };
-  const changeMenuHidden = () => {
-    if(isMenuHidden === 'hidden'){
-      setIsMenuHidden('')
-    }else{
-      setIsMenuHidden('hidden')
-    }
+  const changeTransition = () => {
+    setIsTransitionEnabled((prev) => !prev);
   };
   return (
     <MenuContextProvider
-      value={{ icon, isMenuHidden, changeIcon, changeMenuHidden }}
+      value={{ icon, changeIcon, isTransitionEnabled, changeTransition }}
     >
       <header className="padding-x py-8 fixed z-20 w-full bg-white">
         <nav className="flex justify-between items-center max-container">
