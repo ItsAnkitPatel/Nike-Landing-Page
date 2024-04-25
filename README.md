@@ -27,5 +27,6 @@ This project is a simple landing page created using Tailwind CSS and React. It s
 - Thanks [
 Adrian Hajdin - JS Mastery](https://github.com/adrianhajdin) for the guidance.
 
+![Visitors](https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2FItsAnkitPatel%2FNike-Landing-Page&countColor=%232ccce4&style=plastic)
 
 
